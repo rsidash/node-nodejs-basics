@@ -7,3 +7,5 @@ export const parseEnv = () => {
         if (key.startsWith(prefix)) process.stdout.write(`${key}=${value}; `);
     });
 };
+
+parseEnv();

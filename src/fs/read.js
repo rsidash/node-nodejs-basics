@@ -13,3 +13,5 @@ export const read = async () => {
         console.log(data);
       });
 };
+
+read();

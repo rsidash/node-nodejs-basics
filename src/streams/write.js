@@ -14,3 +14,5 @@ export const write = async () => {
         process.exit();
       });
 };
+
+write();

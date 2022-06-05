@@ -14,3 +14,5 @@ export const compress = async () => {
     const writeStream = createWriteStream(archivePath);
     readStream.pipe(createGzip()).pipe(writeStream);
 };
+
+compress();

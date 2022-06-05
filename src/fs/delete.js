@@ -11,3 +11,5 @@ export const remove = async () => {
         if (err) throw new Error('FS operation failed');
     });
 };
+
+remove();

@@ -14,3 +14,5 @@ export const decompress = async () => {
     const writeStream = createWriteStream(filePath);
     readStream.pipe(createGunzip()).pipe(writeStream);
 };
+
+decompress();
