@@ -1,4 +1,5 @@
-import path from 'path';
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
 import { createReadStream } from 'fs';
 import { EOL } from 'os';
 
@@ -6,7 +7,10 @@ export const read = async () => {
     const dir = 'files';
     const fileName = 'fileToRead.txt';
 
-    const filePath = path.join(dir, fileName);
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+
+    const filePath = path.resolve(__dirname, dir, fileName);
 
     const stream = createReadStream(filePath, 'utf8');
 
